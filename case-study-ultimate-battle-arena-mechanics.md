@@ -9,6 +9,8 @@ When I joined FRAG Games, the development of their AFK Arena-inspired blockchain
 The challenge was complex, with many moving parts, including redesigning the class system, enhancing the battle mechanics, and creating scalable synergies for the characters to foster engaging player experiences.
 
 ## Challenges & Solutions
+### Turn Order and Status Effects
+The Hearthsotne inspired design had to be changed because we needed a global turn counter similar to AFK Arena's design. I simplified the current turn system and created a document to be shared across departments. 
 ### Class System Overhaul
 The existing class system, inspired by Hearthstone, treated each deck as a separate class. However, in this game, each card needed to belong to a single class—Tank, Warrior, Ranged, Mage, or Support. I redesigned the class system to be modular, allowing each player to have a loadout of 15 cards, with active parties consisting of 5 cards (one from each class). This redesign added depth and strategic decision-making for players, encouraging experimentation.
 
@@ -17,9 +19,8 @@ From my experience with turn-based RPGs, I identified that synergies between car
 - Created a **random deck generator in Excel** to evaluate possible synergies within the existing design.
 - Discovered that the current design was rigid and not future-proof, making it difficult for junior designers to create meaningful synergies.
 
-| ![Random Deck Generator](./assets/UBA-1.png)
-|:--:|
-|*Random Deck Generator*|
+![Random Deck Generator](./assets/UBA-1.png)
+
 
 ### Introducing the Meta-Character Concept
 To address these challenges, I introduced the idea of treating the active party of 5 characters as a single "meta-character" composed of 5 abilities. This concept allowed players to mix and match characters to create unique strengths and strategies, much like how characters in fighting games have distinct abilities but are balanced against each other.
@@ -41,6 +42,10 @@ I then created high-level stats for each archetype, assigning ranks to describe 
 |*Points Based Class System*|
 
 However, the ranks couldn't directly map onto the battle system. To solve this, I designed a **middle layer** that converted high-level stat ranks into low-level battle attributes. This middle layer distilled stat ranks into parameters like attack power, crit damage, and cooldown reduction, which made the battle equations more coherent and allowed for balanced gameplay.
+
+| ![](./assets/UBA-3.png)
+|:--:|
+|*Points Based Class System*|
 
 ### Automation & Efficiency
 To streamline the design process, I used **Google Apps Script** to automate the generation of card stats based on their archetype and rank. This allowed us to generate low-level values for each card's strength, which varied based on the card's rarity (e.g., Common, Rare). The automation saved time and ensured consistency across the hundreds of cards.
