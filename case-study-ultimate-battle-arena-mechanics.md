@@ -34,7 +34,11 @@ This approach led to a modular design for the classes:
 Each class had archetypes with specific strengths, introducing creative trade-offs and making it easier for junior designers to contribute effectively.
 
 ### Stat Rankings & Battle System Integration
-I then created high-level stats for each archetype, assigning ranks to describe their behavior. Each archetype had 18 rank points distributed across different stats, which introduced meaningful trade-offs. For example, a Tank might have high defense but lower attack speed. This ranking system anchored each archetype's relative strengths on a shared level playing field, ensuring balance.
+I then created high-level stats for each archetype, assigning ranks to describe their behavior. Each archetype had 18 rank points distributed across different stats, which introduced meaningful trade-offs. For example, a Tank might have high defense but lower attack speed. This point ranking system anchored each archetype's relative strengths on a shared level playing field, ensuring balance.
+
+| ![](./assets/UBA-2.png)
+|:--:|
+|*Points Based Class System*|
 
 However, the ranks couldn't directly map onto the battle system. To solve this, I designed a **middle layer** that converted high-level stat ranks into low-level battle attributes. This middle layer distilled stat ranks into parameters like attack power, crit damage, and cooldown reduction, which made the battle equations more coherent and allowed for balanced gameplay.
 
