@@ -16,6 +16,7 @@ The existing class system, inspired by Hearthstone, treated each deck as a separ
 From my experience with turn-based RPGs, I identified that synergies between cards would be key to a meaningful player experience. Players needed multiple options for synergies to experiment with different strategies, especially in PvP battles. To achieve this, I:
 - Created a **random deck generator in Excel** to evaluate possible synergies within the existing design.
 - Discovered that the current design was rigid and not future-proof, making it difficult for junior designers to create meaningful synergies.
+![Random Deck Generator](./assets/UBA-1.png)
 
 ### Introducing the Meta-Character Concept
 To address these challenges, I introduced the idea of treating the active party of 5 characters as a single "meta-character" composed of 5 abilities. This concept allowed players to mix and match characters to create unique strengths and strategies, much like how characters in fighting games have distinct abilities but are balanced against each other.
