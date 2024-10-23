@@ -1,5 +1,5 @@
- Muhammad Shibli Mansuri
-**Game Designer | Technical Designer | Studio Director**
+# Muhammad Shibli Mansuri
+**Game Designer | Technical Designer | Game Developer**
 
 Hi there! I'm Muhammad Shibli Mansuri, a game designer who’s been passionate about games and their impact for as long as I can remember. With over a decade of experience, I've had the opportunity to work on a wide variety of projects—from educational games that help kids learn science, to hypercasual mobile games that bring fun to millions of players.
 
