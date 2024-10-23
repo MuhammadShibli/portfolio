@@ -17,7 +17,7 @@ Throughout my journey, I've worked with some amazing people and studios, includi
 - [Case Study: Level Design](./level-design-case-study.md)
 - [Case Study: Economy Design](./economy-design-case-study.md)
 - [Case Study: Team Leadership](./team-leadership-case-study.md)
-- [Case Study: Mechanics Design](./mechanics-design-case-study.md)
+- [Case Study: Mechanics Design](./case-study-ultimate-battle-arena-mechanics.md)
 - [Case Study: Technical Documentation](./technical-documentation-case-study.md)
 - [Procedural Map Editor for 2D Game](./procedural-map-editor-case-study.md)
 
