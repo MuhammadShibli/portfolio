@@ -21,6 +21,8 @@ From my experience with turn-based RPGs, I identified that synergies between car
 
 ![Random Deck Generator](./assets/UBA-1.png)
 
+[![Random Deck Generator](./assets/UBA-1.png)](./assets/UBA-1.png)
+
 
 ### Introducing the Meta-Character Concept
 To address these challenges, I introduced the idea of treating the active party of 5 characters as a single "meta-character" composed of 5 abilities. This concept allowed players to mix and match characters to create unique strengths and strategies, much like how characters in fighting games have distinct abilities but are balanced against each other.
