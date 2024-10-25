@@ -1,22 +1,21 @@
-/* Expand the content area dynamically based on screen size */
-.wrapper {
-    width: 90%;           /* Use 90% of the available width to keep the content responsive */
-    max-width: 1400px;    /* Set an upper limit to keep it readable on very large screens */
-    margin: 0 auto;       /* Center the content horizontally */
-    padding-left: 20px;   /* Add padding to maintain space from the viewport edge */
-    padding-right: 20px;
+/* Expand the main content area without breaking the sidebar */
+main {
+    width: calc(100% - 300px);  /* Adjust the main content to use more space, keeping the sidebar in mind */
+    max-width: 1200px;          /* Set a sensible max-width for readability */
+    margin: 0 auto;             /* Center the main content */
+    padding: 20px;              /* Add some padding for breathing space */
 }
 
-/* Ensure that images are responsive */
+/* Maintain responsiveness for images */
 img {
-    max-width: 100%;      /* Ensure images do not overflow their containers */
-    height: auto;
+    max-width: 100%;            /* Ensure images do not overflow their containers */
+    height: auto;               /* Maintain image aspect ratio */
 }
 
-/* Styling for specific images */
+/* Custom styling for selected images */
 .custom-image {
-    width: 80%;           /* Customize the size of images if needed */
+    width: 80%;
     max-width: 800px;
-    margin: 20px auto;    /* Center images and add vertical spacing */
+    margin: 20px auto;
     display: block;
 }
