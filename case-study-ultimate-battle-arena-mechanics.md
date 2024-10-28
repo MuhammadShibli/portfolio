@@ -18,27 +18,34 @@ In the updated design, each card's action was considered a separate turn. This m
 I documented and designed this new turn system thoroughly, ensuring that it was locked down for everyone involved in the project, from designers to developers. This consistency allowed us to balance abilities more effectively and enhance the strategic depth of the game.
 
 ### Concept & Design Approach
-My design philosophy was to treat the deck as a meta-character composed of **5 main attributes**: **Physical Attack**, **Physical Defense**, **Magic Attack**, **Magic Defense**, and **Attack Range**. Each card would be a part of this meta-character and would need to interact effectively with other cards in the deck to create a cohesive and strategic build.
+My design philosophy was to treat the deck as a meta-character composed of **5 attributes**: **Physical Attack**, **Physical Defense**, **Magic Attack**, **Magic Defense**, and **Attack Range**. The idea was that each card had these same attributes, representing 1/5th of the total meta-character's attributes. Thus, the meta-character's stats were effectively the combined attributes of the 5 cards in the player's hand.
 
-To enhance the gameplay complexity, I added **6 sub-attributes**: **AOE Buffs**, **Dodge Chance**, **Crit Chance**, **Crit Damage**, **AOE Offensive**, and **Resistance to Crowd Control**. These sub-attributes allowed for more diverse interactions and strategies, further enriching the player's options during battles.
+While defining cards using only these 5 attributes, I realized they were not sufficient to capture the complexity needed. Therefore, I added **6 more attributes**: **AOE Buffs**, **Dodge Chance**, **Crit Chance**, **Crit Damage**, **AOE Offensive**, and **Resistance to Crowd Control**. These additional attributes allowed for greater diversity in card interactions and strategic options, enriching the overall gameplay.
 
-I then created archetypes for each class—**Tank**, **Warrior**, **Ranged**, **Mage**, and **Support**—that specialized in specific attributes. Each archetype was defined by assigning ranks to the main and sub-attributes, with a cap of **6 points** per attribute. For example, having **6 points in Physical Attack** meant that the card was the strongest possible in dealing physical damage, defined by the number of turns required to deplete an opponent's health to zero. This approach allowed for relative balancing, where the strongest cards could take 1-2 attack turns to eliminate an opponent, while weaker cards might take more than 4 turns.
+| Attribute         | Description                           |
+|-------------------|---------------------------------------|
+| Physical Attack   | Damage dealt through physical attacks |
+| Physical Defense  | Resistance against physical attacks   |
+| Magic Attack      | Damage dealt through magic attacks    |
+| Magic Defense     | Resistance against magic attacks      |
+| Attack Range      | Distance of attacks                   |
+| AOE Buffs         | Buffs affecting multiple allies       |
+| Dodge Chance      | Chance to evade attacks               |
+| Crit Chance       | Chance to land a critical hit         |
+| Crit Damage       | Additional damage from critical hits  |
+| AOE Offensive     | Area damage affecting multiple enemies|
+| Resistance to CC  | Resistance to crowd control effects   |
 
-Using this primary and sub-attribute design, I was able to create different archetypes for each class, such as:
+With these attributes in place, I created **5 primary classes**—**Tank**, **Warrior**, **Ranged**, **Mage**, and **Support**—but I wanted variety within each class. I aimed to ensure that multiple types of healer decks, damage decks, and crowd control decks could be created. To achieve this, I designed at least **3 archetypes** for each class, ensuring that a random selection of 5 cards from different classes would create a balanced meta-character.
 
-- **Paladin-Caster (Tank)**: Balanced in magic offense and defense, providing supportive magic capabilities.  
-  - Attributes: Physical Offense: 2, Magic Offense: 3, Physical Defense: 2, Magic Defense: 3, Speed: 1, AOE Buffs: 3, Dodge Chance: 0, Crit Chance: 0, Crit Damage: 0, AOE Offensive: 2, Resistance to Crowd Control: 2
+| Class       | Archetype          | Physical Offense | Magic Offense | Physical Defense | Magic Defense | Speed | AOE Buffs | Dodge Chance | Crit Chance | Crit Damage | AOE Offensive | Resistance to CC |
+|-------------|--------------------|------------------|---------------|------------------|---------------|-------|-----------|--------------|-------------|-------------|---------------|------------------|
+| Tank        | Paladin-Caster     | 2                | 3             | 2                | 3             | 1     | 3         | 0            | 0           | 0           | 2             | 2                |
+| Tank        | Taunter            | 3                | 0             | 4                | 1             | 3     | 1         | 2            | 0           | 0           | 2             | 2                |
+| Tank        | Damage Sponge      | 0                | 0             | 6                | 6             | 0     | 0         | 0            | 0           | 0           | 0             | 6                |
+| Warrior     | Defensive Aura     | 1                | 1             | 3                | 3             | 1     | 5         | 0            | 0           | 0           | 1             | 3                |
 
-- **Taunter (Tank)**: Focused on drawing enemy attacks while maintaining moderate defense and speed.  
-  - Attributes: Physical Offense: 3, Magic Offense: 0, Physical Defense: 4, Magic Defense: 1, Speed: 3, AOE Buffs: 1, Dodge Chance: 2, Crit Chance: 0, Crit Damage: 0, AOE Offensive: 2, Resistance to Crowd Control: 2
-
-- **Damage Sponge (Tank)**: High physical and magic defense, specialized in absorbing damage.  
-  - Attributes: Physical Offense: 0, Magic Offense: 0, Physical Defense: 6, Magic Defense: 6, Speed: 0, AOE Buffs: 0, Dodge Chance: 0, Crit Chance: 0, Crit Damage: 0, AOE Offensive: 0, Resistance to Crowd Control: 6
-
-- **Defensive Aura (Warrior)**: Provided strong area buffs and moderate defensive abilities to the team.  
-  - Attributes: Physical Offense: 1, Magic Offense: 1, Physical Defense: 3, Magic Defense: 3, Speed: 1, AOE Buffs: 5, Dodge Chance: 0, Crit Chance: 0, Crit Damage: 0, AOE Offensive: 1, Resistance to Crowd Control: 3
-
-This archetype-based approach ensured that each class was highly specialized in its role, relying on the rest of the cards to cover its weaknesses. It also encouraged players to think strategically about which archetypes to include in their deck to maximize synergies and effectiveness.
+This archetype-based approach allowed me to create a "perfect" late-game deck first, akin to designing elite football players like Ronaldo, Messi, or great goalkeepers. By starting with the best possible cards, I could establish a consistent attribute architecture across all cards and efficiently test the battle system. The remaining cards in the game economy would then be designed as weaker variations, maintaining a balanced and engaging experience for players.
 
 ### Stat Rankings & Battle System Integration
 The stat rankings for each archetype were used to assign behavior to each card. These rankings were then converted into battle parameters, which influenced how the cards interacted during battles. For instance, a card with high points in **Physical Attack** would have its rank translated into specific values for **Attack Power**, **Crit Damage**, and **Cooldown Reduction**. This approach allowed for a consistent and transparent balancing process, making it easier for the entire team to understand the role of each card.
