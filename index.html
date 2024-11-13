@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Gallery</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Project Gallery - M. Shibli Mansuri</h1>
+        <button onclick="toggleView()">Toggle Gallery/Table View</button>
+    </header>
+    
+    <div id="projects-container" class="gallery-view"></div>
+
+    <script>
+        const projects = [
+            {
+                "name": "Blaster Heroes",
+                "role": "Narrative Designer & Game Designer",
+                "contributions": "Game narrative, GDD, technical documentation, economy design, boss design",
+                "skills": "Narrative consistency in procedural environments, modular storytelling, technical writing",
+                "link": "./blaster_heroes_case_study.md"
+            },
+            {
+                "name": "Ultimate Battle Arena",
+                "role": "Game Designer",
+                "contributions": "Card class and stat system design, turn mechanics overhaul, balancing game economy",
+                "skills": "Card design, game balance, attribute system creation",
+                "link": "./ultimate_battle_arena.md"
+            },
+            {
+                "name": "Nutmeg Life",
+                "role": "Project Manager, Programmer, Art Director",
+                "platform": "iOS and Android",
+                "contributions": "Managed the entire production pipeline, worked as lead programmer, directed the visual style",
+                "link": "https://play.google.com/store/apps/details?id=com.TBZGames.NutmegLife&hl=en"
+            }
+        ];
+
+        function renderProjects(view) {
+            const container = document.getElementById('projects-container');
+            container.innerHTML = ""; // Clear previous content
+
+            if (view === 'gallery') {
+                projects.forEach(project => {
+                    const projectDiv = document.createElement('div');
+                    projectDiv.classList.add('project-card');
+                    projectDiv.innerHTML = `
+                        <h3>${project.name}</h3>
+                        <p><strong>Role:</strong> ${project.role}</p>
+                        <p><strong>Contributions:</strong> ${project.contributions}</p>
+                        <p><strong>Skills Highlighted:</strong> ${project.skills}</p>
+                        <a href="${project.link}">Read More</a>
+                    `;
+                    container.appendChild(projectDiv);
+                });
+            } else if (view === 'table') {
+                let table = `<table border="1">
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Role</th>
+                        <th>Contributions</th>
+                        <th>Skills</th>
+                        <th>Link</th>
+                    </tr>`;
+                projects.forEach(project => {
+                    table += `
+                        <tr>
+                            <td>${project.name}</td>
+                            <td>${project.role}</td>
+                            <td>${project.contributions}</td>
+                            <td>${project.skills}</td>
+                            <td><a href="${project.link}">Read More</a></td>
+                        </tr>
+                    `;
+                });
+                table += `</table>`;
+                container.innerHTML = table;
+            }
+        }
+
+        function toggleView() {
+            const container = document.getElementById('projects-container');
+            if (container.classList.contains('gallery-view')) {
+                container.classList.remove('gallery-view');
+                container.classList.add('table-view');
+                renderProjects('table');
+            } else {
+                container.classList.remove('table-view');
+                container.classList.add('gallery-view');
+                renderProjects('gallery');
+            }
+        }
+
+        // Render initial view as Gallery
+        renderProjects('gallery');
+    </script>
+</body>
+</html>
