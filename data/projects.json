@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Ultimate Battle Arena",
+    "description": "Designed and implemented a modular card system with attributes and archetypes for a blockchain-based RPG. Overhauled turn mechanics and balanced the game economy.",
+    "tags": ["Card Game", "RPG", "Blockchain", "Economy Design"],
+    "image": "assets/images/ultimate_battle_arena.jpg",
+    "link": "./ultimate_battle_arena_case_study.html"
+  },
+  {
+    "name": "Blaster Heroes",
+    "description": "Revamped the game narrative and authored the GDD for a procedurally generated action game. Integrated modular storytelling to maintain consistency.",
+    "tags": ["Narrative Design", "Procedural Generation", "Action Game"],
+    "image": "assets/images/blaster_heroes.jpg",
+    "link": "./blaster_heroes_case_study.html"
+  },
+  {
+    "name": "Police Quest",
+    "description": "Developed a hyper-casual game that achieved a top 3 ranking in the US App Store. Focused on player retention through engaging mechanics.",
+    "tags": ["Hyper-Casual", "Top-Ranking", "Mobile"],
+    "image": "assets/images/police_quest.jpg",
+    "link": "https://codaplatform.com/2020/10/23/studio-success-how-arcadian-lab-achieved-global-success-with-police-quest/"
+  }
+]
